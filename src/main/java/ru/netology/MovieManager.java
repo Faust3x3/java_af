@@ -12,25 +12,27 @@ public class MovieManager {
         tmp[tmp.length - 1] = movie;
         movies = tmp;
     }
-    public String[] findAll(){
+
+    public String[] findAll() {
         return movies;
     }
 
-    public String[] findLast(){
-        if (limit> movies.length){
-            limit= movies.length;
+    public String[] findLast() {
+        if (limit > movies.length) {
+            limit = movies.length;
         }
         String[] result = new String[limit];
-        for (int i = 0; i<limit; i++){
-            result[i] = movies[movies.length-1-i];
+        for (int i = 0; i < limit; i++) {
+            result[i] = movies[movies.length - 1 - i];
         }
         return result;
     }
-    public String[] findLast(int number){
+
+    public String[] findLast(int number) {
         limit = number;
         String[] result = new String[limit];
-        for (int i = 0; i<limit; i++){
-            result[i] = movies[movies.length-1-i];
+        for (int i = 0; i < limit; i++) {
+            result[i] = movies[movies.length - 1 - i];
         }
         return result;
     }
