@@ -33,7 +33,7 @@ public class MovieManagerTest {
 
     @Test
     public void testFindLastWithNumber() {
-        MovieManager manager = new MovieManager();
+        MovieManager manager = new MovieManager(4);
 
         manager.add("1");
         manager.add("2");
@@ -41,7 +41,7 @@ public class MovieManagerTest {
         manager.add("4");
         manager.add("5");
         String[] expected = {"5", "4", "3", "2"};
-        String[] actual = manager.findLast(4);
+        String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -64,4 +64,5 @@ public class MovieManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
 }
